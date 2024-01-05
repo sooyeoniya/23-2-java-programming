@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>264</y>
+      <w>126</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Lab04Test
+--
+
+--
++ main(String[]): void
++ useShape(): void
++ useEmployee(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>264</y>
+      <w>198</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Shape
+--
+- v1: Point
+- v2: Point
+- v3: Point
+- v4: Point
+--
++ Shape()
++ Shape(Point)
++ Shape(Point, Point)
++ Shape(Point, Point, Point)
++ Shape(Point, Point, Point, Point)
+
++ getV1(): Point
++ getV2(): Point
++ getV3(): Point
++ getV4(): Point
++ setV1(Point): void
++ setV2(Point): void
++ setV3(Point): void
++ setV4(Point): void
+
++ toString(): String
++ getLength(Point, Point): double
++ getAngle(Point, Point, Point): double
++ isParallel(Point, Point, Point, Point): boolean
++ intersectAt(Point, Point, Point, Point): Point</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>288</y>
+      <w>66</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>858</x>
+      <y>264</y>
+      <w>138</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Point
+--
+- x: double
+- y: double
+--
++ Point()
++ Point(double, double)
+
++ getX(): double
++ getY(): double
++ setX(double): void
++ setY(double): void
+
++ toString(): String
++ distance(double, double): double
++ distance(Point): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>510</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>342</y>
+      <w>54</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>858</x>
+      <y>432</y>
+      <w>138</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Line
+--
+
+--
++ Line(Point, Point)
++ getGradient(): double
++ intersectAt(Line): Point
++ toString(): String
++ getCenter(): Point</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>480</y>
+      <w>54</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>552</y>
+      <w>216</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>Quadrilateral
+--
+
+--
++ Quadrilateral(Point, Point, Point, Point)
++ toString(): String
++ getType(): String
++ getPerimeter(): double
++ getArea(): double
++ getCenter(): Point
+- isRectangle(): boolean
+- isSquare(): boolean
+- isTrapezoid(): boolean
+- isParallelogram(): boolean
+- isRhombus(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>900</x>
+      <y>612</y>
+      <w>84</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Type may be
+- isRectangle
+- isSquare
+- isTrapezoid
+- isParallelogram
+- isRhombus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>510</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>552</y>
+      <w>222</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Triangle
+--
+
+--
++ Triangle(Point, Point, Point)
++ toString(): String
++ getType(): String
++ getPerimeter(): double
++ getArea(): double
++ getCenter(): Point
+- isRightTriangle(): boolean
+- isEquilateralTriangle(): boolean
+- isAcuteTriangle(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>660</x>
+      <y>588</y>
+      <w>90</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Type may be
+- isRightTriangle
+- isEquilateralTriangle
+- isAcuteTriangle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>288</y>
+      <w>66</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>264</y>
+      <w>138</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+- fName: String
+- lName: String
+- SSN: String
+--
++ Employee()
++ Employee(String, String, String)
+
++ getfName(): String
++ getlName(): String
++ getSSN(): String
++ setfName(String): void
++ setlName(String): void
++ setSSN(String): void
+
++ toString(): String
++ earnings(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>264</y>
+      <w>198</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>SalariedEmployee
+--
+- weeklySalary: double
+--
++ SalariedEmployee()
++ SalariedEmployee(String, String, String, double)
+
++ getWeeklySalary(): double
++ setWeeklySalary(double): void
+
++ toString(): String
++ earnings(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>288</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>402</y>
+      <w>222</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>HourlyEmployee
+--
+- wage: double
+- hours: double
+--
++ HourlyEmployee()
++ HourlyEmployee(double, double)
++ HourlyEmployee(String, String, String, double, double)
+
++ getWage(): double
++ setWage(double): void
++ getHours(): double
++ setHours(double): void
+
++ toString(): String
++ earnings(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>420</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>462</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CommissionEmployee
+--
+- grossSales: double
+- cRate: double
+--
++ CommissionEmployee()
++ CommissionEmployee(double, double)
++ CommissionEmployee(String, String, String, double, double)
+
++ getGrossSales(): double
++ setGrossSales(double): void
++ getcRate(): double
++ setcRate(double): void
+
++ toString(): String
++ earnings(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>426</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>606</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>222</x>
+      <y>642</y>
+      <w>306</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>BasePlusCommissionEmployee
+--
+- baseSalary: double
+--
++ BasePlusCommissionEmployee(double)
++ BasePlusCommissionEmployee(String, String, String, double, double, double)
+
++ getBaseSalary(): double
++ setBaseSalary(double): void
+
++ toString(): String
++ earnings(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

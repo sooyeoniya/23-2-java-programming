@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>259</y>
+      <w>203</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+~ mainView: VBox
+~ buttons: VBox
+~ title: Label
+~ playBtn: Button
+~ settingBtn: Button
+~ profileBtn: Button
+~ mainImg: Image
+~ imgView: ImageView
++ XMAX: static int
++ YMAX: static int
+~ mainScreenLayout: BorderPane
+~ scene: Scene
+--
++ start(Stage): void
++ main(String[]): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>490</y>
+      <w>203</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
++ MOVE: static final int
++ SIZE: static final int
++ XMAX: static int
++ YMAX: static int
++ MESH: static int[][]
+--
++ MoveRight(Tetromino): static void
++ MoveLeft(Tetromino): static void
++ makeRect(): static Tetromino</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>259</y>
+      <w>203</w>
+      <h>469</h>
+    </coordinates>
+    <panel_attributes>Tetris
+--
++ MOVE: static int
++ SIZE: static int
++ XMAX: static int
++ YMAX: static int
++ MESH: static int[][]
++ p1: Pane
++ p2: Pane
+~ p3: Pane
+~ pp: HBox
+~ mainScreenLayout: VBox
+~ scene: Scene
+~ object: Tetromino
+~ nextObj: Tetromino
+~ top: int
+~ linesNo: int
+~ game: boolean
++ score: static int
++ dur: static int
++ scoretext: static Text
++ leveltext: static Text
+~ start: Label
+~ pause: Label
+~ timeline: Timeline
++ color: static String
++ textColor: static Color
+--
++ start(Stage): void
+- moveOnKeyPress(Tetromino): void
+- MoveTurn(Tetromino): void
+- RemoveRows(Pane): void
+- MoveDown(Rectangle): void
+- MoveDown(Tetromino): void
+- MoveRight(Rectangle): void
+- MoveLeft(Rectangle): void
+- MoveUp(Rectangle): void
+- BlankSpaceA(Tetromino): boolean
+- BlankSpaceB(Tetromino): boolean
+- BlankSpaceC(Tetromino): boolean
+- BlankSpaceD(Tetromino): boolean
+- Rotation(Rectangle, int, int): boolean
++ main(String[]): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>462</y>
+      <w>203</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>GameOver
+--
++ XMAX: static int
++ YMAX: static int
++ score: static int
+~ image: Image
+~ imageView: ImageView
+~ scoretext: Label
+~ newGame: Button
+~ exit: Button
+~ gameOverImage: VBox
+~ textscore: StackPane
+~ buttons: HBox
+~ mainScreenLayout: BorderPane
+~ scene: Scene
+--
++ start(Stage): void
++ main(String[]): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>224</y>
+      <w>203</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Settings
+--
+~ gameMode: Label
+~ theme: Label
+~ CBGameMode: ComboBox&lt;String&gt;
+~ CBTheme: ComboBox&lt;String&gt;
+~ hGameMode: HBox
+~ hColorMode: HBox
+~ mainScreenLayout: BorderPane
+~ scene: Scene
+--
++ start(Stage): void
++ main(String[]): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>385</y>
+      <w>203</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>Profile
+--
+~ myName: Label
+~ myClassNum: Label
+~ myMajor: Label
+~ thisClass: Label
+~ thisTopic: Label
+~ profile: Image
+~ profileView: Image
+~ koreatechLogo: Image
+~ KoreatechLogoView: ImageView
+~ profileImage: VBox
+~ profileText: Pane
+~ mainScreenLayout: VBox
+~ scene: Scene
+--
++ start(Stage): void
++ main(String[]): static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>259</y>
+      <w>315</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Tetromino
+--
+~ a: Rectangle
+~ b: Rectangle
+~ c: Rectangle
+~ d: Rectangle
+~ color: Color
+~ colormain: Color
+- name: String
++ tetromino: int
+--
++ Tetromino(Rectangle, Rectangle, Rectangle, Rectangle)
++ Tetromino(Rectangle, Rectangle, Rectangle, Rectangle, String)
++ getName(): String
++ changeTetromino(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>273</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>826</x>
+      <y>273</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>504</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>301</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>399</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>826</x>
+      <y>525</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1015</x>
+      <y>413</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>64</x>
+      <y>232</y>
+      <w>200</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Craps
+--
+-randomNumbers: Random
+-Status: enum
+_-SNAKE_EYES: int=2_
+_-TREY: int=3_
+_-SEVEN: int=7_
+_-YO+LEVEN: int=11_
+_-BOX_CARS: int=12_
+--
++run(): void
++chatter(): String
++play(): boolean
++rollDice(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>232</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Lab02Test
+--
++main(String[]): void
+--
++useTime(): void
++useRational(): void
++useCraps(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>232</y>
+      <w>200</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>Time
+--
+-hour: int
+-minute: int
+-second: int
+--
++Time()
++Time(Time)
++Time(int)
++Time(int, int)
++Time(int, int, int)
++toString(): String
++toUniversalString(): String
++getHour(): int
++getMinute(): int
++getSecond(): int
++setHour(int): void
++setMinute(int): void
++setSecond(int): void
++setTime(int, int, int): void
++tick(): void
++tickBack(): void
++nextSecond(): void
++nextMinute(): void
++nextHour(): void
++previousHour(): void
++previousMinute(): void
++previousSecond(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>320</y>
+      <w>200</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>Rational
+--
+-numerator: int
+-denominator: int
+--
++Rational()
++Rational(int, int)
+-reduce(): void
+-gcd(int, int): int
++add(Rational): Rational
++sub(Rational): Rational
++multiply(Rational): Rational
++divide(Rational): Rational
++toString(): String
++getNumerator(): int
++getDenominator(): int
++setNumerator(int): void
++setDenominator(int): void
++fpRepresentation(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>280</y>
+      <w>48</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>280</y>
+      <w>48</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>304</y>
+      <w>24</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

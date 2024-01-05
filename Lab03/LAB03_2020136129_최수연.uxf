@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>384</y>
+      <w>168</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>TicTacToe
+--
+- BOARDSIZE: int
+- Status: enum
+- board: char[][]
+- firstPlayer: boolean
+- gameOver: boolean
+--
++ TicTacToe()
++ play(): void
+- printStatus(int): void
+- gameStatus(): Status
++ printBoard(): void
+- printSymbol(int, char): void
+- validMove(int, int): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>384</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Lab03Test
+--
+
+--
++ main(String[]): void
++ useRoll36(): void
++ useDeck(): void
++ useDeck2(): void
++ useTicTacToe(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>264</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Roll36
+--
+- randomNumbers: Random
+- totals: int[]
+--
++ rollDice36(): void
++ roll2(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>536</y>
+      <w>168</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+- randomNumbers: Random
+- NUMBER_OF_CARDS: int
+- deck: Card[]
+- currentCard: int
+--
++ Deck()
++ shuffle(): void
++ printDeck(): void
++ dealCard(): Card</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>368</y>
+      <w>168</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Deck2
+--
+- faces: String[]
+- suits: String[]
+- randomNumbers: Random
+- NUMBER_OF_CARDS: int
+- deck: Card2[]
+- currentCard: int
+--
++ Deck2()
++ shuffle(): void
++ dealCard(): Card2
++ printDeck(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>928</x>
+      <y>536</y>
+      <w>168</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+- face: Face
+- suit: Suit
++ Suit: enum
++ Face: enum
+--
++ toString(): String
++ getFace(): Face
++ getSuit(): Suit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1096</x>
+      <y>368</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Card2
+--
+- face: String
+- suit: String
+--
++ Card(String, String)
++ toString(): String
++ getFace(): String
++ getSuit(): String
++ getFaceAsInt(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1176</x>
+      <y>608</y>
+      <w>168</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>《enum》
+Face
+--
+_DEUCE: String_
+_THREE: String_
+_FOUR: String_
+_FIVE: String_
+_SIX: String_
+_SEVEN: String_
+_EIGHT: String_
+_NINE: String_
+_TEN: String_
+_JACK: String_
+_QUEEN: String_
+_KING: String_
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1176</x>
+      <y>496</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>《enum》
+Suit
+--
+_DIAMONDS: String_
+_CLUBS: String_
+_HEARTS: String_
+_SPADES: String_
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>424</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>424</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>560</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>640</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>544</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>416</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>336</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>480</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>472</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>432</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>《enum》
+Status
+--
+_WIN: String_
+_DRAW: String_
+_CONTINUE: String_
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>480</y>
+      <w>24</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>336</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>584</y>
+      <w>192</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>DeckOfCards
+--
+
+--
++ hasPair(Card[]): boolean
++ hasTwoPairs(Card[]): boolean
++ hasThreeOfAKind(Card[]): boolean
++ hasFourOfAKind(Card[]): boolean
++ hasFlush(Card[]): boolean
++ hasStraight(Card[]): boolean
++ hasFullHouse(Card[]): boolean
+- sortCardsByFace(Card[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>200</y>
+      <w>200</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>DeckOfCards2
+--
+
+--
++ hasPair(Card2[]): boolean
++ hasTwoPairs(Card2[]): boolean
++ hasThreeOfAKind(Card2[]): boolean
++ hasFourOfAKind(Card2[]): boolean
++ hasFlush(Card2[]): boolean
++ hasStraight(Card2[]): boolean
++ hasFullHouse(Card2[]): boolean
+- sortCardsByFace(Card2[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>260</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Lab01Test
+--
+
+--
++ main(String[]): void
++ useFunctions() : void
++ usePoint3D() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>260</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Point3D
+--
+- x : double = 0.0
+- y : double = 0.0
+- z : double = 0.0
+--
++ setCord(double, double, double) : void
++ getLength() : double
++ getDistance(Point3D) : double
++ translate(double, double, double) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>260</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Functions
+--
+
+--
++ getTriples(int) : void
++ isPalindrome(int) : boolean
++ printTriangles(int) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>330</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>330</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+</diagram>

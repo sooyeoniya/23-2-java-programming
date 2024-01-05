@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>290</y>
+      <w>105</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Lab05Test
+--
+
+--
++ main(String[]): void
++ useShape(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>280</y>
+      <w>165</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Shape
+&lt;&lt;abstract&gt;&gt;
+--
+- v1: Point
+- v2: Point
+- v3: Point
+- v4: Point
+--
++ Shape()
++ Shape(Point)
++ Shape(Point, Point)
++ Shape(Point, Point, Point)
++ Shape(Point, Point, Point, Point)
+
++ getV1(): Point
++ getV2(): Point
++ getV3(): Point
++ getV4(): Point
++ setV1(Point): void
++ setV2(Point): void
++ setV3(Point): void
++ setV4(Point): void
+
++ toString(): String
++ getLength(Point, Point): double
++ getAngle(Point, Point, Point): double
++ isParallel(Point, Point, Point, Point): boolean
++ intersectAt(Point, Point, Point, Point): Point</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>310</y>
+      <w>55</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>290</y>
+      <w>115</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>Point
+--
+- x: double
+- y: double
+--
++ Point()
++ Point(double, double)
+
++ getX(): double
++ getY(): double
++ setX(double): void
++ setY(double): void
+
++ toString(): String
++ distance(double, double): double
++ distance(Point): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>495</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>695</x>
+      <y>355</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>430</y>
+      <w>115</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Line
+--
+- v2: Point
+--
++ Line(Point, Point)
++ getGradient(): double
++ intersectAt(Line): Point
++ toString(): String
++ getCenter(): Point
++ getLength(Point, Point): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>410</y>
+      <w>15</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>530</y>
+      <w>180</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>Quadrilateral
+--
+
+--
++ Quadrilateral(Point, Point, Point, Point)
++ toString(): String
++ getType(): String
++ getPerimeter(): double
++ getArea(): double
++ getCenter(): Point
+
+- isRectangle(): boolean
+- isSquare(): boolean
+- isTrapezoid(): boolean
+- isParallelogram(): boolean
+- isRhombus(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>765</x>
+      <y>580</y>
+      <w>70</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Type may be
+- isRectangle
+- isSquare
+- isTrapezoid
+- isParallelogram
+- isRhombus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>495</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>465</x>
+      <y>530</y>
+      <w>185</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Triangle
+--
+
+--
++ Triangle(Point, Point, Point)
++ toString(): String
++ getType(): String
++ getPerimeter(): double
++ getArea(): double
++ getCenter(): Point
+
+- isRightTriangle(): boolean
+- isEquilateralTriangle(): boolean
+- isAcuteTriangle(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>565</x>
+      <y>560</y>
+      <w>75</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Type may be
+- isRightTriangle
+- isEquilateralTriangle
+- isAcuteTriangle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>245</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>565</x>
+      <y>180</y>
+      <w>115</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Shapeable
+&lt;&lt;interface&gt;&gt;
+--
+
+--
+/+ getType(): String/
+/+ getPerimeter(): double/
+/+ getArea(): double/
+/+ getCenter(): Point/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>345</x>
+      <y>310</y>
+      <w>55</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>245</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>MovablePoint
+--
+- x: int
+- y: int
+- xSpeed: int
+- ySpeed: int
+--
++ MovablePoint(int, int, int, int)
++ toString() : String
++ moveUp(): void
++ moveDown(): void
++ moveLeft(): void
++ moveRight(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>245</y>
+      <w>115</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>MovableCircle
+--
+- radius: int
+- center: MovablePoint
+--
++ MovableCircle(int, int, int, int, int)
++ toString() : String
++ moveUp(): void
++ moveDown(): void
++ moveLeft(): void
++ moveRight(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>265</y>
+      <w>55</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>185</x>
+      <y>190</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>125</y>
+      <w>115</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Movable
+&lt;&lt;interface&gt;&gt;
+--
+
+--
+/+ moveUp(): void/
+/+ moveDown(): void/
+/+ moveLeft(): void/
+/+ moveRight(): void/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>190</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>435</x>
+      <y>335</y>
+      <w>15</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>445</y>
+      <w>90</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Circle
+--
+# radius: double
+--
++ Circle(double)
++ toString() : String
++ getPerimeter(): double
++ getArea(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>360</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>GeometricObject
+&lt;&lt;interface&gt;&gt;
+--
+
+--
+/+ getPerimeter(): double/
+/+ getArea(): double/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>405</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>325</x>
+      <y>535</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ResizableCircle
+--
+
+--
++ ResizableCircle(double)
++ toString() : String
++ resize(int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>500</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>455</y>
+      <w>85</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Resizable
+&lt;&lt;interface&gt;&gt;
+--
+
+--
+/+ resize(int): void/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>495</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
